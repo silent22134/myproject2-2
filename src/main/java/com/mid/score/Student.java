@@ -1,6 +1,6 @@
 package com.mid.score;
 
-public class Student {
+public class Student implements Printable{
     String name;
     int english;
     int math;
@@ -15,6 +15,7 @@ public class Student {
     public Student(){
         this("john",-1,-1);
     }
+    @Override
     public void print(){
         System.out.println(name+"\t"+english+"\t"+math+"\t"+getAverage());
     }

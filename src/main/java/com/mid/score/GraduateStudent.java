@@ -1,6 +1,6 @@
 package com.mid.score;
 
-public class GraduateStudent extends Student{
+public class GraduateStudent extends Student implements Printable{
     int thesis;
     public GraduateStudent(String name,int english,int math,int thesis){
         super(name, english, math);
