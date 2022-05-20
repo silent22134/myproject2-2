@@ -27,7 +27,8 @@ public class Runner {
             System.out.println(mins);
             int fee = 30*(mins/60);
             System.out.println("Fee :"+fee);
-
+//            3:14 => NT90 , 3:15 => NT120
+//            3:15 ~ 3:30 => NT105
         }catch (Exception e){
             System.out.println("Wrong Format");
         }
