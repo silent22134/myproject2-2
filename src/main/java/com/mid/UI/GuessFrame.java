@@ -6,16 +6,16 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class GuessFrame extends JFrame {
-//    Fields
-//    Constructors
+    //    Fields
+    JButton button = new JButton("hello");
+    JLabel label = new JLabel("lebel");
+    //    Constructors
     public  GuessFrame(){
         super();
         setSize(600,400);
         setLocation(300,200);
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
 
-        JButton button = new JButton("hello");
-        JLabel label = new JLabel("lebel");
         button.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
