@@ -1,6 +1,7 @@
 package com.mid.score;
 
 import javax.imageio.IIOException;
+import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
@@ -9,10 +10,25 @@ public class ScoringFile {
     public static void main(String[] args) {
         try {
             FileReader fileReader = new FileReader("scores.txt");
-            int data = fileReader.read();
-            System.out.println(data);
-            data = fileReader.read();
-            System.out.println(data);
+            BufferedReader reader = new BufferedReader(fileReader);
+            String line = reader.readLine();
+            while (line != null){
+//                System.out.println(line);
+                String[] token = line.split(",");
+                String name = token[0];
+                int engish = Integer.parseInt(token[1]);
+                int math = Integer.parseInt(token[2]);
+                Student stu = new Student(name,engish,math);
+                stu.print();
+                line = reader.readLine();
+            }
+
+//            int data = fileReader.read();
+//            while (data != -1){
+//                System.out.print((char) data);
+//                data = fileReader.read();
+//            }
+
         }catch (FileNotFoundException e ){
             System.out.println("Data Loading Fail");
         }catch (IOException e ){
